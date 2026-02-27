@@ -1,5 +1,6 @@
 // require express
 const express = require('express');
+const env = require('dotenv').config();
 const article = require('./models/article')
 // require mongodb
 const mongo = require('mongoose');
@@ -8,10 +9,10 @@ const mongo = require('mongoose');
 const app = express();
 
 // to conect to mongodb 
-const url = "mongodb+srv://hm4712483_db_user:keJCTv1S3x77Bx5g@cluster1.08sepnf.mongodb.net/?appName=Cluster1";
+
 const connect = async()=>{
     try {
-        await mongo.connect(url); 
+        await mongo.connect(process.env.mongourl); 
         console.log('connected to mongodb');
     } catch (error) {
         console.log(error);
