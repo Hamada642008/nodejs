@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employees</h1>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Category</th>
+        </tr>
+        <% for (const employee of employees) { %>
+            <tr>
+                <td><%=employee.id%></td>
+                <td><%=employee.name%></td>
+                <td><%=employee.age%></td>
+                <td><%=employee.category%></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
