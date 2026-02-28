@@ -110,7 +110,4 @@ app.get("/showemployees",async(req,res)=>{
 
 
 // to listen all requests or responses
-const port = 4000;
-app.listen(port, ()=>{
-    console.log(`port: ${port}`);
-})
+module.exports=app
